@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image';
 import {useState} from "react";
 import {useRouter} from "next/navigation";
 
@@ -24,7 +25,7 @@ export const DigiDelete = ({item}) => {
 	return (
 		<div className="flex flex-col justify-center text-center items-center p-2 hover:cursor-pointer ">
 			<div className="hover:border-2 border-black p-2" >
-				<img src={item.image} className="w-20 h-20 mx-auto" />
+				<Image src={item.image} className="w-20 h-20 mx-auto" alt={item.name} />
 				<h3 className="font-bold">{item.name}</h3>
 				<p className="text-sm">{item.tingkat}</p>
 				

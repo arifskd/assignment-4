@@ -1,6 +1,6 @@
 import {DigiProcess} from "@/components/digiProcess";
 import {DigiDelete} from "@/components/digiDelete";
-
+import Image from 'next/image';
 
 
 export default async function Home() {
@@ -23,7 +23,7 @@ export default async function Home() {
 			return (
 				<div className="flex flex-col justify-center items-center">
 					<div className="flex flex-col text-center p-2 hover:cursor-pointer hover:bg-slate-500 hover:text-white" >
-						<img src={digimon.img} className="w-20 h-20 mx-auto" />
+						<Image src={digimon.img} className="w-20 h-20 mx-auto" alt={digimon.name}/>
 						<h3 className="font-bold">{digimon.name}</h3>
 						<p className="text-sm">{digimon.level}</p>
 					</div>
