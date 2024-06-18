@@ -21,7 +21,7 @@ export default async function Home() {
       <div className="flex justify-start gap-2 p-10 h-auto overflow-y-auto">
 		{dataDigimon.map((digimon) => {
 			return (
-				<div className="flex flex-col justify-center items-center">
+				<div key={digimon.name} className="flex flex-col justify-center items-center">
 					<div className="flex flex-col text-center p-2 hover:cursor-pointer hover:bg-slate-500 hover:text-white" >
 						<Image src={digimon.img} className="w-20 h-20 mx-auto" alt={digimon.name}/>
 						<h3 className="font-bold">{digimon.name}</h3>
