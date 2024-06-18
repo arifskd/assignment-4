@@ -36,7 +36,7 @@ export default async function Home() {
 		
       </div>
       <h1 className="text-center font-bold text-xl mt-5">Chosen Digimons</h1>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-3 sm:grid-cols-4">
 		{data.map((item) => {
 			return (
 				<DigiDelete key={item._id} item={item} />
